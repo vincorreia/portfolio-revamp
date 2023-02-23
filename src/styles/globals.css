@@ -2,11 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: black;
+  --secondary: #20C20E 
+}
 input {
   @apply w-full;
 }
 
 #__next {
-  @apply flex flex-col bg-gray-900 font-roboto text-white;
+  @apply flex flex-col bg-[var(--primary)] font-roboto text-white;
   height: 100svh;
+}
+
+.befored {
+  @apply before:h-[1px] before:grow before:bg-white;
+}
+
+.aftered {
+  @apply after:h-[1px] after:flex-grow after:bg-white;
 }
