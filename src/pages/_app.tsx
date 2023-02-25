@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Nav />
-      <main className="container mx-auto flex-grow">
+      <main className="container mx-auto h-full flex-grow overflow-auto px-6 sm:p-6">
         <Component {...pageProps} />
       </main>
       <Footer />

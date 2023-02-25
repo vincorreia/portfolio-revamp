@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 export const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -12,12 +14,12 @@ export const Nav = () => {
       }`}
     >
       <nav
-        className="relative flex items-center justify-between px-4 py-2 sm:container sm:mx-auto"
+        className="relative flex items-center justify-between p-4 sm:container sm:mx-auto"
         tabIndex={0}
       >
-        <a className="text-2xl font-bold" href="#">
-          Vinnicius Correia
-        </a>
+        <Link href="/">
+          <Image alt="Logo" src="Tentative logo.svg" width={48} height={48} />
+        </Link>
         <Hambuger onClick={onClick} open={open} />
         <Ul className="hidden sm:flex sm:items-center sm:gap-x-3" />
       </nav>
@@ -38,18 +40,22 @@ const Ul: React.FC<UlProps> = ({ className }) => {
   return (
     <ul className={`${className} font-semibold`} role="menubar">
       <li role="menuitem" aria-label="Projects">
-        <a href="#">Projects</a>
+        <Link href="/projects">Projects</Link>
       </li>
       <li role="menuitem" aria-label="Study">
-        <a href="#">Study</a>
+        <a href="/study">Study</a>
       </li>
       <li role="menuitem" aria-label="Contributions">
-        <a href="#">Contributions</a>
+        <a href="/contributions">Contributions</a>
       </li>
       <li role="menuitem" aria-label="Resume">
-        <button className="w-full rounded border border-white p-2 hover:bg-gray-800 active:bg-gray-700">
+        <a
+          className="w-full rounded border border-white p-2 text-center capitalize hover:bg-zinc-900 active:bg-zinc-800"
+          href="CV Vinnicius 2023 - English.pdf"
+          download
+        >
           Resume
-        </button>
+        </a>
       </li>
     </ul>
   );

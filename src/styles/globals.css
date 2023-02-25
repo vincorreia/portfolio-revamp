@@ -4,7 +4,7 @@
 
 :root {
   --primary: black;
-  --secondary: #20C20E 
+  --secondary: #20c20e;
 }
 input {
   @apply w-full;
@@ -12,6 +12,7 @@ input {
 
 #__next {
   @apply flex flex-col bg-[var(--primary)] font-roboto text-white;
+  overflow: hidden;
   height: 100svh;
 }
 
