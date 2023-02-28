@@ -6,6 +6,9 @@ const nextConfig = {
     locales: ["en-US"],
     defaultLocale: "en-US",
   },
+  images: {
+    domains: ["via.placeholder.com"],
+  }
 };
 
 export default nextConfig;

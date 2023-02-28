@@ -22,6 +22,7 @@
     "@typescript-eslint/parser": "^5.53.0",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
+    "framer-motion": "^10.0.0",
     "next": "13.1.6",
     "prettier-plugin-tailwindcss": "^0.2.3",
     "react": "18.2.0",

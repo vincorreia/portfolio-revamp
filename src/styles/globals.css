@@ -23,3 +23,17 @@ input {
 .aftered {
   @apply after:h-[1px] after:flex-grow after:bg-white;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-400 hover:bg-zinc-600 active:bg-zinc-800;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 5px;
+}
