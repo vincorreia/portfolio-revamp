@@ -7,8 +7,8 @@ const nextConfig = {
     defaultLocale: "en-US",
   },
   images: {
-    domains: ["via.placeholder.com"],
-  }
+    domains: ["via.placeholder.com", "user-images.githubusercontent.com"],
+  },
 };
 
 export default nextConfig;

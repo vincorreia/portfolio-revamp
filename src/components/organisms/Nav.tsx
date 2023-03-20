@@ -18,7 +18,7 @@ export const Nav = () => {
         tabIndex={0}
       >
         <Link href="/">
-          <Image alt="Logo" src="Tentative logo.svg" width={48} height={48} />
+          <Image alt="Logo" src="/Tentative logo.svg" width={48} height={48} />
         </Link>
         <Hambuger onClick={onClick} open={open} />
         <Ul className="hidden sm:flex sm:items-center sm:gap-x-3" />
@@ -51,7 +51,7 @@ const Ul: React.FC<UlProps> = ({ className }) => {
       <li role="menuitem" aria-label="Resume">
         <a
           className="w-full rounded border border-white p-2 text-center capitalize hover:bg-zinc-900 active:bg-zinc-800"
-          href="CV Vinnicius 2023 - English.pdf"
+          href="/CV Vinnicius 2023 - English.pdf"
           download
         >
           Resume

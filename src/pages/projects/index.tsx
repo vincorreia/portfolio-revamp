@@ -1,19 +1,44 @@
 import { Grid } from "@/components/organisms/Grid";
 import { ProjectFigure } from "@/components/organisms/ProjectFigure";
-import Head from "next/head";
+import type { Project } from "@/types/Projects";
+import type { GetStaticProps, NextPage } from "next";
 
-const Index = () => {
+import fs from "fs";
+import path from "path";
+import { getFrontmatter } from "@/utils/parsers";
+
+export const getStaticProps: GetStaticProps = () => {
+  const files = fs.readdirSync(path.resolve("src/data/projectsMD"));
+
+  const projects = files
+    .map((filename): Project | null => {
+      if (filename.endsWith(".md")) {
+        const markdownWithMeta = fs.readFileSync(
+          path.resolve("src/data/projectsMD", filename),
+          "utf-8"
+        );
+
+        return getFrontmatter(markdownWithMeta);
+      }
+
+      return null;
+    })
+    .filter((item): item is Project => Boolean(item));
+
+  return {
+    props: {
+      projects,
+    },
+  };
+};
+
+type Props = {
+  projects: Project[];
+};
+
+const Index: NextPage<Props> = ({ projects }) => {
   return (
     <>
-      <Head>
-        <title>Vinnicius Correia</title>
-        <meta
-          name="description"
-          content="Vinnicius Correia's Frontend Portfolio"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <section className="flex h-full flex-col gap-y-4">
         <h1 className="text-4xl font-bold text-green-500 sm:text-7xl">
           Projects
@@ -23,16 +48,8 @@ const Index = () => {
           relevance so take a good look at them!
         </p>
         <Grid>
-          {Array.from({ length: 16 }, (_item, i) => (
-            <ProjectFigure
-              id={i.toString()}
-              key={i}
-              image="https://via.placeholder.com/300x200"
-              title="Project Name"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptate, quod, quia, voluptates quas voluptatibus quae voluptatem
-          quibusdam quidem nesciunt."
-            />
+          {projects.map((project) => (
+            <ProjectFigure key={project.id} {...project} />
           ))}
         </Grid>
       </section>

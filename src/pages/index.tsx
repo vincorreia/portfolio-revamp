@@ -1,21 +1,10 @@
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Head from "next/head";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Vinnicius Correia</title>
-        <meta
-          name="description"
-          content="Vinnicius Correia's Frontend Portfolio"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <section className="grid h-full place-items-center">
         <article className="flex max-w-4xl flex-col justify-center gap-y-2 sm:gap-y-4">
           <p className="text-gray-300 sm:text-lg">Hey there! I&apos;m</p>
@@ -39,7 +28,7 @@ export default function Home() {
             </Link>
             <a
               className="flex basis-full items-center justify-center gap-x-2 rounded-lg border-2 border-white p-3 hover:bg-zinc-900 active:bg-zinc-800 sm:basis-auto"
-              href="CV Vinnicius 2023 - English.pdf"
+              href="/CV Vinnicius 2023 - English.pdf"
               download
             >
               <FontAwesomeIcon icon={faFileArrowDown} />

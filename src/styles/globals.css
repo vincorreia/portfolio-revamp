@@ -5,6 +5,7 @@
 :root {
   --primary: black;
   --secondary: #20c20e;
+  --code: #161b22;
 }
 input {
   @apply w-full;

@@ -1,0 +1,94 @@
+.task-list-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.task-list-item > input {
+  max-width: 1rem;
+}
+
+.hljs-keyword {
+  color: #ff7b72;
+}
+.hljs-title.function_ {
+  color: #d2a8ff;
+}
+
+.hljs-attr,
+.hljs-property {
+  color: #79c0ff;
+}
+
+.markdown pre {
+  background-color: var(--code);
+  padding: 0.5rem 1rem;
+  line-height: 1rem;
+}
+
+.markdown {
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.markdown p {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.markdown code {
+  background-color: rgba(110,118,129,0.4);
+  padding: 0.2em 0.4em;
+  line-height: 1rem;
+  border-radius: 6px;
+}
+
+.markdown pre > code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.markdown hr {
+  margin: 1rem 0;
+}
+
+.markdown h1 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid #1f2630;
+}
+
+.markdown h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #1f2630;
+}
+
+.markdown h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.markdown h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.markdown h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.markdown ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.markdown a {
+  color: #58a6ff;
+}
