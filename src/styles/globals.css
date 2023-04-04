@@ -11,9 +11,14 @@ input {
   @apply w-full;
 }
 
-#__next {
+body {
   @apply bg-[var(--primary)] font-roboto text-white;
   min-height: 100svh;
+}
+
+#__next {
+  @apply flex flex-col overflow-auto;
+  height: 100svh;
 }
 
 .befored {
@@ -22,6 +27,10 @@ input {
 
 .aftered {
   @apply after:h-[1px] after:flex-grow after:bg-white;
+}
+
+* {
+  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {

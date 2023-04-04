@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <main className="container mx-auto flex-grow overflow-auto px-6 sm:p-6">
+      <main className="container mx-auto flex-grow px-6 sm:p-6">
         <Component {...pageProps} />
       </main>
       <Footer />
