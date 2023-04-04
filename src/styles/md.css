@@ -1,7 +1,7 @@
 .task-list-item {
   display: flex;
   gap: 0.5rem;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .task-list-item > input {

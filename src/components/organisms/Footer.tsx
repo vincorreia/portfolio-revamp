@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 export const Footer = () => {
   return (
-    <footer className="flex flex-col justify-center gap-y-8 bg-[var(--primary)] pt-8 pb-4">
+    <footer className="sticky top-full flex flex-col gap-y-8 bg-[var(--primary)] py-4">
       <ul className="befored aftered flex items-center gap-x-8" role="menu">
         <li role="menuitem" aria-label="Github">
           <a

@@ -9,8 +9,8 @@ export const Nav = () => {
   };
   return (
     <header
-      className={`flex flex-col sm:static sm:block ${
-        open ? "fixed top-0 bottom-0 z-10 w-full bg-[var(--primary)]" : ""
+      className={`sticky top-0 left-0 right-0 z-10 flex flex-col bg-[var(--primary)] sm:block ${
+        open ? "bottom-0" : ""
       }`}
     >
       <nav

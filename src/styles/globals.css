@@ -12,9 +12,8 @@ input {
 }
 
 #__next {
-  @apply flex flex-col bg-[var(--primary)] font-roboto text-white;
-  overflow: hidden;
-  height: 100svh;
+  @apply bg-[var(--primary)] font-roboto text-white;
+  min-height: 100svh;
 }
 
 .befored {
