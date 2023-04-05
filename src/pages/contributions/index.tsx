@@ -1,12 +1,12 @@
-import { ProjectFigure } from "@/components/organisms/ProjectFigure";
 import type { Project } from "@/types/Projects";
 import type { GetStaticProps, NextPage } from "next";
 
+import { ContributionFigure } from "@/components/organisms/ContributionFigure";
 import { getProjectsFrontMatter } from "@/utils/md";
 import { GridPage } from "@/components/templates/GridPage";
 
 export const getStaticProps: GetStaticProps = () => {
-  const projects = getProjectsFrontMatter("src/data/projectsMD");
+  const projects = getProjectsFrontMatter("src/data/contributionsMD");
 
   return {
     props: {
@@ -22,12 +22,12 @@ type Props = {
 const Index: NextPage<Props> = ({ projects }) => {
   return (
     <GridPage
-      title="Projects"
-      description="Here you can find a couple of projects made by me, they are ordered by
-          relevance so take a good look at them!"
+      title="Contributions"
+      description="Here you can find a couple of projects I&#39;ve contributed to, they
+        are ordered by relevance so take a good look at them!"
     >
       {projects.map((project) => (
-        <ProjectFigure key={project.id} {...project} />
+        <ContributionFigure key={project.id} {...project} />
       ))}
     </GridPage>
   );

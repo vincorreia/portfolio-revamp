@@ -38,7 +38,7 @@
   max-width: 70ch;
 }
 
-.markdown p {
+.markdown > :last-child {
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -63,6 +63,7 @@
 
 .markdown h1 {
   font-size: 2.5rem;
+  line-height: 2.75rem;
   padding-bottom: 1rem;
   font-weight: 700;
   border-bottom: 2px solid #1f2630;
@@ -103,4 +104,9 @@
 
 .markdown a {
   color: #58a6ff;
+}
+
+.markdown > :not(:last-child) > img {
+  width: 100%;
+  object-fit: scale-down;
 }

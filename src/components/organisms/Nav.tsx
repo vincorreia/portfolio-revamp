@@ -1,3 +1,4 @@
+import { RESUME_CLASSES } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -43,14 +44,14 @@ const Ul: React.FC<UlProps> = ({ className }) => {
         <Link href="/projects">Projects</Link>
       </li>
       <li role="menuitem" aria-label="Study">
-        <a href="/study">Study</a>
+        <Link href="/study">Study</Link>
       </li>
       <li role="menuitem" aria-label="Contributions">
-        <a href="/contributions">Contributions</a>
+        <Link href="/contributions">Contributions</Link>
       </li>
       <li role="menuitem" aria-label="Resume">
         <a
-          className="w-full rounded border border-white p-2 text-center capitalize hover:bg-zinc-900 active:bg-zinc-800"
+          className={RESUME_CLASSES}
           href="/CV Vinnicius 2023 - English.pdf"
           download
         >

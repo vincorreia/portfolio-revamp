@@ -1,6 +1,4 @@
-export type Project = {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-};
+import type { projectSchema } from "@/schemas";
+import type { z } from "zod";
+
+export type Project = z.infer<typeof projectSchema>;

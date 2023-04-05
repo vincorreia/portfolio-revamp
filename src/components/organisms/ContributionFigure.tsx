@@ -2,9 +2,9 @@ import { Figure } from "@/components/molecules/Figure";
 import type { Project } from "@/types/Projects";
 import Link from "next/link";
 
-export const ProjectFigure = ({ id, ...rest }: Project) => {
+export const ContributionFigure = ({ id, ...rest }: Project) => {
   return (
-    <Link href={`/projects/${id}`}>
+    <Link href={`/contributions/${id}`}>
       <Figure {...rest} />
     </Link>
   );

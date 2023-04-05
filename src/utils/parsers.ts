@@ -33,12 +33,20 @@ export const getFrontmatter = (md: string) => {
   return null;
 };
 
-export const getBody = (md: string) => {
+export const getDataFromMD = (
+  md: string
+) => {
   if (md.startsWith("---")) {
-    const [, , ...body] = md.split("---");
+    const [, frontMatter, ...body] = md.split("---");
 
-    return body.join("---");
+    return {
+      frontMatter: parseFrontmatter(frontMatter),
+      content: body.join("---"),
+    };
   }
 
-  return md;
+  return {
+    frontMatter: null,
+    content: md,
+  };
 };

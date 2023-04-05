@@ -17,8 +17,9 @@ body {
 }
 
 #__next {
-  @apply flex flex-col overflow-auto;
+  @apply flex flex-col overflow-auto scroll-smooth;
   height: 100svh;
+  scroll-padding-top: 5rem;
 }
 
 .befored {
