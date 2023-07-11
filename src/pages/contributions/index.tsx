@@ -4,9 +4,10 @@ import type { GetStaticProps, NextPage } from "next";
 import { ContributionFigure } from "@/components/organisms/contribution-figure";
 import { getProjectsFrontMatter } from "@/utils/md";
 import { GridPage } from "@/components/templates/grid-page";
+import { ROUTES } from "@/constants/routes";
 
 export const getStaticProps: GetStaticProps = () => {
-  const projects = getProjectsFrontMatter("src/data/contributionsMD");
+  const projects = getProjectsFrontMatter(ROUTES.CONTRIBUTIONS_MD);
 
   return {
     props: {

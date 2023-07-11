@@ -4,9 +4,10 @@ import { useRouter } from "next/router";
 import type { Project } from "@/types/project";
 import { getPathsFromMD, getProjectData } from "@/utils/md";
 import { MDPage } from "@/components/templates/md-page";
+import { ROUTES } from "@/constants/routes";
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const paths = getPathsFromMD("src/data/projectsMD");
+  const paths = getPathsFromMD(ROUTES.PROJECTS_MD);
 
   return {
     paths,
@@ -18,7 +19,7 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
   const { id } = params as { id: string };
 
   const { content, frontMatter } = getProjectData(
-    `src/data/projectsMD/${id}.md`
+    `${ROUTES.PROJECTS_MD}/${id}.md`
   );
 
   return {

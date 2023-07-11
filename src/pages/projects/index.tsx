@@ -4,9 +4,10 @@ import type { GetStaticProps, NextPage } from "next";
 
 import { getProjectsFrontMatter } from "@/utils/md";
 import { GridPage } from "@/components/templates/grid-page";
+import { ROUTES } from "@/constants/routes";
 
 export const getStaticProps: GetStaticProps = () => {
-  const projects = getProjectsFrontMatter("src/data/projectsMD");
+  const projects = getProjectsFrontMatter(ROUTES.PROJECTS_MD);
 
   return {
     props: {
