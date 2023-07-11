@@ -19,7 +19,7 @@ export const Nav = () => {
         tabIndex={0}
       >
         <Link href="/">
-          <Image alt="Logo" src="/Tentative logo.svg" width={48} height={48} />
+          <Image alt="Logo" src="logo.svg" width={48} height={48} />
         </Link>
         <Hambuger onClick={onClick} open={open} />
         <Ul className="hidden sm:flex sm:items-center sm:gap-x-3" />
