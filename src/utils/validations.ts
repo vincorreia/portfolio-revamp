@@ -1,5 +1,5 @@
 import { projectSchema } from "@/schemas";
-import type { Project } from "@/types/Projects";
+import type { Project } from "@/types/project";
 
 export const validateFrontmatter = (
   frontmatter: unknown

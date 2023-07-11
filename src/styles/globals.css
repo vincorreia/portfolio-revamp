@@ -30,6 +30,22 @@ body {
   @apply after:h-[1px] after:flex-grow after:bg-white;
 }
 
+.dot {
+  @apply h-4 w-4 rounded-full bg-white;
+}
+
+.active > .dot {
+  @apply bg-[var(--secondary)];
+}
+
+.befored.active {
+  @apply before:bg-[var(--secondary)];
+}
+
+.aftered.active {
+  @apply after:bg-[var(--secondary)];
+}
+
 * {
   scrollbar-width: thin;
 }

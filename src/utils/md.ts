@@ -1,4 +1,4 @@
-import type { Project } from "@/types/Projects";
+import type { Project } from "@/types/project";
 import { getDataFromMD, getFrontmatter } from "@/utils/parsers";
 import fs from "fs";
 import path from "path";

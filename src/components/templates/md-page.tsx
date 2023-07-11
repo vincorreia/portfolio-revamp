@@ -1,5 +1,5 @@
-import { SideNav } from "@/components/molecules/SideNav";
-import type { Project } from "@/types/Projects";
+import { SideNav } from "@/components/molecules/side-nav";
+import type { Project } from "@/types/project";
 import Head from "next/head";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import rehypeHighlight from "rehype-highlight/lib";

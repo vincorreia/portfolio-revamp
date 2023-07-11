@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { Project } from "@/types/Projects";
+import type { Project } from "@/types/project";
 
 type Props = Omit<Project, "id">;
 

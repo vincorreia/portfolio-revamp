@@ -1,5 +1,5 @@
-import { Figure } from "@/components/molecules/Figure";
-import type { Project } from "@/types/Projects";
+import { Figure } from "@/components/molecules/figure";
+import type { Project } from "@/types/project";
 import Link from "next/link";
 
 export const ContributionFigure = ({ id, ...rest }: Project) => {

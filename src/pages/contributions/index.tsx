@@ -1,9 +1,9 @@
-import type { Project } from "@/types/Projects";
+import type { Project } from "@/types/project";
 import type { GetStaticProps, NextPage } from "next";
 
-import { ContributionFigure } from "@/components/organisms/ContributionFigure";
+import { ContributionFigure } from "@/components/organisms/contribution-figure";
 import { getProjectsFrontMatter } from "@/utils/md";
-import { GridPage } from "@/components/templates/GridPage";
+import { GridPage } from "@/components/templates/grid-page";
 
 export const getStaticProps: GetStaticProps = () => {
   const projects = getProjectsFrontMatter("src/data/contributionsMD");

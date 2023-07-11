@@ -1,4 +1,4 @@
-import { Grid } from "@/components/organisms/Grid";
+import { Grid } from "@/components/organisms/grid";
 
 type Props = {
   title: string;

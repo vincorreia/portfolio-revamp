@@ -1,8 +1,8 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { useRouter } from "next/router";
-import type { Project } from "@/types/Projects";
+import type { Project } from "@/types/project";
 import { getPathsFromMD, getProjectData } from "@/utils/md";
-import { MDPage } from "@/components/templates/MDPage";
+import { MDPage } from "@/components/templates/md-page";
 
 export const getStaticPaths: GetStaticPaths = () => {
   const paths = getPathsFromMD("src/data/contributionsMD");

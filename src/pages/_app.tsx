@@ -1,5 +1,5 @@
-import { Footer } from "@/components/organisms/Footer";
-import { Nav } from "@/components/organisms/Nav";
+import { Footer } from "@/components/organisms/footer";
+import { Nav } from "@/components/organisms/nav";
 import "@/styles/globals.css";
 import "@/styles/md.css";
 import type { AppProps } from "next/app";
