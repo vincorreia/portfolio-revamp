@@ -1,4 +1,4 @@
-import { RESUME_CLASSES } from "@/constants";
+import { CV, LOGO, RESUME_CLASSES } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export const Nav = () => {
         tabIndex={0}
       >
         <Link href="/">
-          <Image alt="Logo" src="logo.svg" width={48} height={48} />
+          <Image alt="Logo" src={LOGO} width={48} height={48} />
         </Link>
         <Hambuger onClick={onClick} open={open} />
         <Ul className="hidden sm:flex sm:items-center sm:gap-x-3" />
@@ -50,11 +50,7 @@ const Ul: React.FC<UlProps> = ({ className }) => {
         <Link href="/contributions">Contributions</Link>
       </li>
       <li role="menuitem" aria-label="Resume">
-        <a
-          className={RESUME_CLASSES}
-          href="/CV Vinnicius 2023 - English.pdf"
-          download
-        >
+        <a className={RESUME_CLASSES} href={CV} download>
           Resume
         </a>
       </li>

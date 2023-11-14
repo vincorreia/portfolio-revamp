@@ -7,6 +7,7 @@ import type { AppProps } from "next/app";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Head from "next/head";
+import { LOGO } from "@/constants";
 config.autoAddCss = false;
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Vinnicius Correia</title>
+        <link rel="preload" href={LOGO} as="image" />
         <meta
           name="description"
           content="Vinnicius Correia's Frontend Portfolio"

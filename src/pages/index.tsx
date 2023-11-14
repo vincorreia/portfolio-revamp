@@ -1,3 +1,4 @@
+import { CV } from "@/constants";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -28,7 +29,7 @@ export default function Home() {
             </Link>
             <a
               className="flex basis-full items-center justify-center gap-x-2 rounded-lg border-2 border-white p-3 hover:bg-zinc-900 active:bg-zinc-800 sm:basis-auto"
-              href="/CV Vinnicius 2023 - English.pdf"
+              href={CV}
               download
             >
               <FontAwesomeIcon icon={faFileArrowDown} />
