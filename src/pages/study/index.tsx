@@ -28,17 +28,22 @@ export const getStaticProps = () => {
     props: {
       data: {
         university,
+        test: new Date().toISOString(),
       },
     },
+    revalidate: 60, // 24 hours
   };
 };
 
 type Params = {
   data: {
     university: TimelineObj[];
+    test: number;
   };
 };
 const Main: NextPage<Params> = ({ data }) => {
+  console.log(data.test);
+
   return (
     <GridPage title="Study" description="My study">
       <h2 className="text-4xl">University Education</h2>
