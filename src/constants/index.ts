@@ -9,3 +9,5 @@ export const RESUME_CLASSES = BASE_BTN_CLASSES + " text-center capitalize";
 export const CV = "/CV - Vinnicius Correia.pdf";
 
 export const LOGO = "/logo.svg";
+
+export const DAY_IN_SECONDS = 60 * 60 * 24;

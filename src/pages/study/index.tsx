@@ -5,6 +5,7 @@ import Image from "next/image";
 import estacio from "@/assets/images/estacio.png";
 import { Timeline } from "@/components/organisms/timeline";
 import type { TimelineObj } from "@/types/timeline";
+import { DAY_IN_SECONDS } from "@/constants";
 
 const buildTimeline = (startYear: number, endYear: number) => {
   const timeline: TimelineObj[] = [];
@@ -28,22 +29,19 @@ export const getStaticProps = () => {
     props: {
       data: {
         university,
-        test: new Date().toISOString(),
       },
     },
-    revalidate: 60, // 24 hours
+    revalidate: DAY_IN_SECONDS,
   };
 };
 
 type Params = {
   data: {
     university: TimelineObj[];
-    test: number;
   };
 };
-const Main: NextPage<Params> = ({ data }) => {
-  console.log(data.test);
 
+const Main: NextPage<Params> = ({ data }) => {
   return (
     <GridPage title="Study" description="My study">
       <h2 className="text-4xl">University Education</h2>
